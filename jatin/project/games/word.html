@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guess the Word Game</title>
+</head>
+<body>
+    <h1>Guess the Word Game</h1>
+    <p>Guess the hidden word, one letter at a time:</p>
+    <p id="wordDisplay"></p>
+    <p id="guessesLeft">Guesses left: <span id="guessCount">10</span></p>
+    <input type="text" id="letterInput">
+    <button id="guessButton">Guess</button>
+    <p id="message"></p>
+
+    <script>
+        const words = ["apple", "banana", "cherry", "orange", "strawberry"];
+        let chosenWord = words[Math.floor(Math.random() * words.length)];
+        let displayWord = "_".repeat(chosenWord.length);
+
+        const wordDisplay = document.getElementById('wordDisplay');
+        const guessesLeft = document.getElementById('guessesLeft');
+        const guessCount = document.getElementById('guessCount');
+        const letterInput = document.getElementById('letterInput');
+        const guessButton = document.getElementById('guessButton');
+        const message = document.getElementById('message');
+
+        wordDisplay.textContent = displayWord;
+
+        let remainingGuesses = 10;
+        let lettersGuessed = [];
+
+        guessButton.addEventListener('click', function () {
+            if (remainingGuesses === 0) {
+                message.textContent = "Game over! You've run out of guesses.";
+                return;
+            }
+
+            const letter = letterInput.value.toLowerCase();
+
+            if (lettersGuessed.includes(letter)) {
+                message.textContent = `You've already guessed "${letter}". Try another letter.`;
+                return;
+            }
+
+            lettersGuessed.push(letter);
+
+            if (chosenWord.includes(letter)) {
+                for (let i = 0; i < chosenWord.length; i++) {
+                    if (chosenWord[i] === letter) {
+                        displayWord = displayWord.substring(0, i) + letter + displayWord.substring(i + 1);
+                    }
+                }
+                wordDisplay.textContent = displayWord;
+                if (displayWord === chosenWord) {
+                    message.textContent = "Congratulations! You've guessed the word!";
+                    guessButton.disabled = true;
+                }
+            } else {
+                remainingGuesses--;
+                guessCount.textContent = remainingGuesses;
+                if (remainingGuesses === 0) {
+                    message.textContent = `Game over! The word was "${chosenWord}".`;
+                    guessButton.disabled = true;
+                } else {
+                    message.textContent = `Incorrect guess. Try again.`;
+                }
+            }
+
+            letterInput.value = '';
+        });
+    </script>
+</body>
+</html>

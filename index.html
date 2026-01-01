@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title> Games Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1> GAMES HUB </h1>
+      <p class="subtitle">Collection of lightweight, creative browser games , click a card to play.</p>
+      <div class="meta">
+        <span class="hint">Press <kbd>G</kbd> to focus first game</span>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌗</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="cards-grid" aria-label="Games">
+      <a class="card" href="games/tic-tac-toe/" title="Play Tic Tac Toe">
+        <div class="card-icon">✖️⭕</div>
+        <div class="badge" id="tttBadge">—</div>
+        <h3>Tic Tac Toe</h3>
+        <p>Classic 3x3 strategy — play 2-player or against the CPU.</p>
+        <div class="meta-row"><span class="play">Play →</span><small class="muted">Local</small></div>
+      </a>
+
+      <a class="card" href="games/connect-four/" title="Play Connect Four">
+        <div class="card-icon">🔴🟡</div>
+        <div class="badge" id="connectBadge">—</div>
+        <h3>Connect Four</h3>
+        <p>Classic 7x6 connect-four — drop discs and connect four in a row.</p>
+        <div class="meta-row"><span class="play">Play →</span><small class="muted">Strategy</small></div>
+      </a>
+
+      <a class="card" href="games/minesweeper/" title="Play Minesweeper">
+        <div class="card-icon">💣</div>
+        <div class="badge" id="minesBadge">—</div>
+        <h3>Minesweeper</h3>
+        <p>Uncover safe tiles; flag mines. Beginner 9x9 with 10 mines.</p>
+        <div class="meta-row"><span class="play">Play →</span><small class="muted">Puzzle</small></div>
+      </a>
+
+      <a class="card" href="games/pong/" title="Play Pong">
+        <div class="card-icon">🏓</div>
+        <div class="badge" id="pongBadge">—</div>
+        <h3>Ping Pong</h3>
+        <p>Arcade pong — beat the CPU or play 2-player.</p>
+        <div class="meta-row"><span class="play">Play →</span><small class="muted">Arcade</small></div>
+      </a>
+
+      <a class="card" href="games/simon-says/" title="Play Simon Says">
+        <div class="card-icon">🎵</div>
+        <div class="badge" id="simonBadge">—</div>
+        <h3>Jingle Bell</h3>
+        <p>Repeat the color sequence — tones & levels. Aim for a new best!</p>
+        <div class="meta-row"><span class="play">Play →</span><small class="muted">Reaction</small></div>
+      </a>
+
+      <a class="card" href="games/2048/" title="Play 2048">
+        <div class="card-icon">2️⃣0️⃣4️⃣8️⃣</div>
+        <div class="badge" id="2048Badge">—</div>
+        <h3>2048</h3>
+        <p>Join tiles to make 2048. Use strategy and plan your moves.</p>
+        <div class="meta-row"><span class="play">Play →</span><small class="muted">Puzzle</small></div>
+      </a>
+
+      <a class="card" href="games/snake/" title="Play Snake">
+        <div class="card-icon">🍏</div>
+        <div class="badge" id="snakeBadge">—</div>
+        <h3>Snake</h3>
+        <p>Classic snake: collect food to grow, avoid walls and yourself.</p>
+        <div class="meta-row"><span class="play">Play →</span><small class="muted">Arcade</small></div>
+      </a>
+    </section>
+
+    <footer class="credits">OWNER -JATIN AGRAWAL!!!</footer>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

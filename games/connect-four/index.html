@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Connect Four</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="connect">
+    <h1>Connect Four</h1>
+    <div class="controls">
+      <button id="reset">Reset</button>
+      <button id="undo" title="Undo last move" disabled>Undo</button>
+      <button id="redo" title="Redo" disabled>Redo</button>
+      <label class="mode"><input type="checkbox" id="cpuToggle" /> <span>Play vs CPU</span></label>
+      <label class="mode"><select id="cpuDifficulty" aria-label="CPU difficulty"><option value="easy">Easy</option><option value="medium" selected>Medium</option><option value="hard">Hard</option></select></label>
+      <div style="margin-left:8px;color:var(--muted)">Your wins: <strong id="winsCount">0</strong></div>
+      <div id="status" class="status">Ready <span id="jsOk" title="JS status">JS OK</span></div>
+      <a class="back" href="../..">← Back</a>
+    </div>
+    <div id="board" class="board" role="grid" aria-label="Connect Four board"></div>
+    <div class="hint">Click a column to drop a disc. First to connect four wins.</div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

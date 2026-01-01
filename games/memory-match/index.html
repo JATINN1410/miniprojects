@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Memory Match</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="memory">
+    <h1>Memory Match</h1>
+    <div class="controls"><button id="start">Start</button><span id="moves">Moves: 0</span><a class="back" href="../..">← Back</a></div>
+    <div class="grid" id="grid"></div>
+
+    <div id="modal" class="modal" role="dialog" aria-hidden="true">
+      <div class="modal-card">
+        <h2 id="modalTitle">You matched all cards!</h2>
+        <p id="modalBody">Great job — Moves: <strong id="finalMoves">0</strong></p>
+        <div class="modal-actions"><button id="playAgain">Play Again</button><button id="closeModal">Close</button></div>
+      </div>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

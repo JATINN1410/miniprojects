@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Minesweeper</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="ms">
+    <h1>Minesweeper</h1>
+    <div class="controls">
+      <button id="newGame">New Game</button>
+      <div class="info">Mines: <strong id="minesLeft">10</strong></div>
+      <div class="info">Time: <strong id="timer">0</strong>s</div>
+      <div style="margin-left:auto;color:var(--muted)">Best: <strong id="bestTime">—</strong>s</div>
+      <div id="status" class="status">Ready <span id="jsOk" title="JS status">JS OK</span></div>
+      <a class="back" href="../..">← Back</a>
+    </div>
+
+    <div id="board" class="board" role="grid"></div>
+    <div class="hint">Left-click to reveal, right-click to flag. Win by revealing all safe tiles.</div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

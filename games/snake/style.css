@@ -1,0 +1,8 @@
+:root{--bg:#071226;--card:#0a1220;--accent:#10b981}
+body{background:linear-gradient(180deg,var(--bg),#031024);color:#eaf6ff;font-family:Inter,system-ui;margin:0;display:flex;align-items:center;justify-content:center;height:100vh}
+.snake{width:min(420px,95%);text-align:center}
+canvas{background:linear-gradient(180deg,#061226,#041228);border-radius:10px;display:block;margin:0 auto;box-shadow:0 14px 40px rgba(2,6,23,0.6)}
+.hud{color:#a7c1d2;margin:8px 0}
+.controls{display:flex;justify-content:space-between;margin-top:12px}
+button{background:linear-gradient(90deg,var(--accent),#06b6d4);border:none;padding:.6rem 1rem;border-radius:8px;font-weight:700;color:#021}
+.hint{color:#9fb9c9;margin-top:8px}

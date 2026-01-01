@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="ttt">
+    <h1>Tic Tac Toe</h1>
+    <div class="status">Mode: <strong id="modeLabel">2 Players</strong> — Player <span id="turn">X</span>'s turn</div>
+
+    <div class="mode-controls" style="margin-bottom:8px;display:flex;gap:8px;justify-content:center">
+      <button id="twoPlayer" aria-pressed="true">2 Players</button>
+      <button id="vsCpu">Play vs CPU</button>
+      <div id="wins" style="margin-left:8px;color:var(--muted)">Your wins: <strong id="winsCount">0</strong></div>
+    </div>
+
+    <div class="board" id="board" aria-label="Tic Tac Toe board">
+      <div class="cell" data-index="0"></div>
+      <div class="cell" data-index="1"></div>
+      <div class="cell" data-index="2"></div>
+      <div class="cell" data-index="3"></div>
+      <div class="cell" data-index="4"></div>
+      <div class="cell" data-index="5"></div>
+      <div class="cell" data-index="6"></div>
+      <div class="cell" data-index="7"></div>
+      <div class="cell" data-index="8"></div>
+    </div>
+    <div class="controls">
+      <button id="reset">Reset</button>
+      <a href="../.." class="back">← Back</a>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

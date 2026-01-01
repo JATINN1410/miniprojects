@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ping Pong</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="pong">
+    <h1>Ping Pong</h1>
+    <div class="controls">
+      <button id="start">Start</button>
+      <button id="pause">Pause</button>
+      <button id="reset">Reset</button>
+      <label class="mode" style="margin-left:12px"><input id="aiToggle" type="checkbox" checked /> <span>AI Opponent</span></label>
+      <div style="margin-left:12px;color:var(--muted)">Score: <strong id="score">0 - 0</strong></div>
+      <div style="margin-left:8px;color:var(--muted)">Best: <strong id="best">—</strong></div>
+      <div id="status" class="status">Ready <span id="jsOk" title="JS status">JS OK</span></div>
+      <a class="back" href="../..">← Back</a>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas" width="800" height="480" aria-label="Pong game canvas" role="img"></canvas>
+    </div>
+
+    <div class="hint">Controls: W/S for left paddle, Up/Down arrows for right paddle (if 2-player). Toggle AI for single-player.</div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
